@@ -136,8 +136,8 @@ extends SimpleChannelInboundHandler<FullHttpRequest>
 		}
 		finally
 		{
-			notifyComplete(context);
 			ctx.attr(CONTEXT_KEY).set(null);
+			notifyComplete(context);
 		}
 	}
 
